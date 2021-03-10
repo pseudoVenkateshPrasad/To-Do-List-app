@@ -1,0 +1,23 @@
+{
+  "name": "new_to_do",
+  "homepage": "https://pseudoVenkateshPrasad.github.io/To-Do-List-app",
+  "version": "1.0.0",
+  "description": "This is a fresh todo app",
+  "main": "index.js",
+  "scripts": {
+    "predeploy":"npm run build",
+    "deploy" : "gh-pages -d build",
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "todo"
+  ],
+  "author": "pseudoCoder",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "mongoose": "^5.11.18"
+  }
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%=title%>
+    </title>
+    <link rel="icon" href="./todoicon.png" sizes="16x16" type="image/png">
+    <script
+      src="https://kit.fontawesome.com/97e80ba977.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <!-- Hello There! -->
+    <div class="container">
+
+        <!-- Heading for Todo App -->
+        <div class="header">
+
+            <i class="fa fa-list-alt head-icon"></i>
+            <h1 class="title">To Do List App</h1>
+
+        </div>
+
+        <!-- Task List Display Area -->
+        <div class="task-book">
+            <% for(let i of to_do_list){ %>
+                <div class="task-strip">
+                    <input type="checkbox" name="" id="<%=i._id %>">
+                    
+                    <label class="task-des" for="<%=i._id %>">
+                        <span class="custom">
+
+                        </span>
+                        <%= i.task %>
+                    </label>
+
+                    <a href="/delete/?id=<%= i._id %>" class="link">
+                        <i class="fa fa-trash delete"></i>
+                    </a>
+
+                </div> 
+            <%}%>
+
+        </div>
+
+        <!-- Input Area for tasks -->
+        <div class="form-details">
+            <form action="/add-task" method="post">
+
+                <!-- <input type="number" class="entries" name="id" id="serial-key" placeholder="S.No."  /> -->
+                <input type="text" class="entries" name="task" id="task-des" placeholder="Enter the Task " required />
+                <button class="submit-btn" type="submit"> Add Task </button>
+                
+            </form> 
+        </div>
+    </div>
+</body>
+</html>

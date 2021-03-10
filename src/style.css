@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+
+*{
+    padding:0;
+    margin: 0;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+body{
+    background-color: #232323;
+   
+}
+
+.container
+{
+    background-color: #0d0d0d;
+    max-width: 55%;
+    margin: auto;
+    margin-top: 30px;
+    padding: 20px;
+    border: 3px solid #39ff14;
+    box-shadow: 0 6px 6px 3px black;
+}
+
+.header
+{
+    padding: 10px;
+    width: 70%;
+    line-height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    background-color: #201e1e;
+    margin: auto;
+    box-shadow: inset 0 0px 6px 2px #000;
+    /* text-align: center; */
+}
+
+.head-icon
+{
+    font-size: 30px;
+    color: white;
+    text-shadow: 0 0px 13px #39ff14;
+    margin: 0 20px;
+    /* text-align: center; */
+}
+
+.title
+{
+    font-size: 30px;
+    color: white;
+    text-shadow: 0 0px 13px #39ff14;
+    /* text-align: center; */
+}
+
+
+.task-book
+{
+    padding: 10px;
+    width: 70%;
+    line-height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    margin: auto;
+
+}
+
+.task-strip
+{
+    width: 90%;
+    color: #39ff14;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #088127;
+    padding:0 10px;
+    transition: transform 200ms ease-in;
+
+}
+.task-strip:hover
+{
+    background-color: #000;
+
+}
+
+.task-strip:hover .custom
+{
+    transform:scale(1.1);
+    color: #39ff14;
+    border-color: #39ff14;
+}
+
+.task-strip:hover .custom, 
+[type="checkbox"]:focus + label .custom{
+
+    transform:scale(1.1);
+    /* color: #39ff14; */
+    border-color: #39ff14;
+}
+
+/* .task-strip:hover .custom,  */
+[type="checkbox"]:checked + label .custom{
+
+    background-color: #39ff14;
+    border-color: #39ff14;
+    box-shadow: inset 0 0 1px 2px #0d0d0d;
+}
+
+[type="checkbox"]:checked + label {
+    text-decoration: line-through;
+    opacity: 0.3;
+}
+    
+.task-des
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+/* input[type=checkbox] */
+[type="checkbox"]
+{
+    position: absolute;
+    opacity: 0;
+
+}
+
+.custom
+{
+    --size:0.6em;
+    display: inline-block;
+    width: var(--size);
+    height: var(--size);
+    cursor: pointer;
+    border: 1px solid #96f385;
+    border-radius: 50%;
+    margin-right: 12px;
+}
+
+
+/* Form CSS written here */
+.form-details
+{
+    padding: 10px;  
+    width: 70%;
+    line-height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin: auto;
+    /* border: 1px solid white; */
+}
+/* #serial-key{
+    max-width: 60px;
+} */
+
+
+.submit-btn
+{
+    padding: 6px;
+    font-size: .9rem;
+    line-height: 25px;
+    outline-style: none;
+    border: none;
+    box-shadow: 0 5px 6px 0 black;
+    background-color: rgb(14, 78, 25);
+    margin-top: -2px;
+    transform: scale(1);
+    transition: all 200ms ease-in;
+}
+
+.submit-btn:hover
+{
+    transform: scale(1.05);
+    background-color: lawngreen;
+    font-weight: 600;
+    border-radius: 2px;
+    box-shadow: 0 5px 7px 0 black;
+}
+
+.entries
+{
+    max-width: 200px;
+    font-size: .8rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    padding: 5px;
+    line-height: 25px;
+    outline-style: none;
+    border: none;     
+    margin-top: 2px;  
+    border-bottom: 1px solid rgb(14, 78, 25);
+    background-color: inherit;
+    margin: 0 5px;
+    color: white;
+  
+}
+
+.entries:focus
+{
+    background-color: #000;
+}
+
+
+.delete
+{
+    /* border: 1px solid whitesmoke; */
+    padding: 4px;
+    border-radius: 50%;
+    --size:1.1em;
+    width: var(--size);
+    height: var(--size);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.link
+{
+    color: #39ff14;
+}
+
+.link:hover
+{
+    color: #ff342f;
+    text-shadow: 0 0 8px #201e1e;
+}
